@@ -7,6 +7,21 @@
 <h1 id="前端处理"><a href="#前端处理" class="headerlink" title="前端处理"></a>前端处理</h1>]]></content>
   </entry>
   <entry>
+    <title>Ubuntu16.04 触摸板无响应</title>
+    <url>/2020/11/28/Ubuntu%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法"><a href="#神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法" class="headerlink" title="神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法"></a>神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法</h1><p>sudo gedit /etc/default/grub<br>把GRUB_CMDLINE_LINUX=” “ 改为GRUB_CMDLINE_LINUX=”i8042.reset i8042.nomux i8042.nopnp i8042.noloop”<br>sudo update-grub<br>sudo reboot</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Thread 进程</title>
+    <url>/2020/05/07/Thread/</url>
+    <content><![CDATA[<p>#　进程资源函数 (resource limit)</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CPU                   0                    <span class="comment">/* CPU time in ms */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_FSIZE                 1                    <span class="comment">/* Maximum filesize */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_DATA                  2                    <span class="comment">/* max data size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_STACK                 3                    <span class="comment">/* max stack size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CORE                  4                    <span class="comment">/* max core file size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_RSS                   5                    <span class="comment">/* max resident set size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NOFILE                6                    <span class="comment">/* max number of open files */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_AS                    7                    <span class="comment">/* address space limit(?) */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NPROC                 8                    <span class="comment">/* max number of processes */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MEMLOCK               9                    <span class="comment">/* max locked-in-memory address space */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_LOCKS                 10                   <span class="comment">/* maximum file locks held */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_SIGPENDING            11                   <span class="comment">/* max number of pending signals */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MSGQUEUE              12                   <span class="comment">/* maximum bytes in POSIX mqueues */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIM_NLIMITS                 13</span></span><br></pre></td></tr></table></figure>
+<p>rlim_cur字段是资源的当前资源限制，例如current-&gt;signal-&gt;rlim[RLIMIT_CPU],rmlim_cur表示正在运行进程所占用的CPU时间的当前限制。</p>
+<h1 id="进程切换（process-switch）"><a href="#进程切换（process-switch）" class="headerlink" title="进程切换（process switch）"></a>进程切换（process switch）</h1><p>硬件上下文–&gt;进程恢复执行前必须装入寄存器的一组数据称为硬件上下文</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Docker 学习笔记</title>
     <url>/2020/05/02/artilce/</url>
     <content><![CDATA[<h1 id="docker-三要素"><a href="#docker-三要素" class="headerlink" title="docker 三要素"></a>docker 三要素</h1><ul>
@@ -30,21 +45,6 @@ sudo systemctl start docker
 <h2 id="添加当前用户组到docker用户组"><a href="#添加当前用户组到docker用户组" class="headerlink" title="添加当前用户组到docker用户组"></a>添加当前用户组到docker用户组</h2><pre><code>sudo groupadd docker
 sudo usermod -aG docker $USER
 </code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title>Ubuntu16.04 触摸板无响应</title>
-    <url>/2020/11/28/Ubuntu%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法"><a href="#神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法" class="headerlink" title="神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法"></a>神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法</h1><p>sudo gedit /etc/default/grub<br>把GRUB_CMDLINE_LINUX=” “ 改为GRUB_CMDLINE_LINUX=”i8042.reset i8042.nomux i8042.nopnp i8042.noloop”<br>sudo update-grub<br>sudo reboot</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Thread 进程</title>
-    <url>/2020/05/07/Thread/</url>
-    <content><![CDATA[<p>#　进程资源函数 (resource limit)</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CPU                   0                    <span class="comment">/* CPU time in ms */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_FSIZE                 1                    <span class="comment">/* Maximum filesize */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_DATA                  2                    <span class="comment">/* max data size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_STACK                 3                    <span class="comment">/* max stack size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CORE                  4                    <span class="comment">/* max core file size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_RSS                   5                    <span class="comment">/* max resident set size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NOFILE                6                    <span class="comment">/* max number of open files */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_AS                    7                    <span class="comment">/* address space limit(?) */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NPROC                 8                    <span class="comment">/* max number of processes */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MEMLOCK               9                    <span class="comment">/* max locked-in-memory address space */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_LOCKS                 10                   <span class="comment">/* maximum file locks held */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_SIGPENDING            11                   <span class="comment">/* max number of pending signals */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MSGQUEUE              12                   <span class="comment">/* maximum bytes in POSIX mqueues */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIM_NLIMITS                 13</span></span><br></pre></td></tr></table></figure>
-<p>rlim_cur字段是资源的当前资源限制，例如current-&gt;signal-&gt;rlim[RLIMIT_CPU],rmlim_cur表示正在运行进程所占用的CPU时间的当前限制。</p>
-<h1 id="进程切换（process-switch）"><a href="#进程切换（process-switch）" class="headerlink" title="进程切换（process switch）"></a>进程切换（process switch）</h1><p>硬件上下文–&gt;进程恢复执行前必须装入寄存器的一组数据称为硬件上下文</p>
 ]]></content>
   </entry>
 </search>
