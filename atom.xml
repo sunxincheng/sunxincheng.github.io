@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SunXinCheng</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2021-02-06T03:21:16.095Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>SunXinCheng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>newpage</title>
+    <link href="http://yoursite.com/2021/01/31/newpage/"/>
+    <id>http://yoursite.com/2021/01/31/newpage/</id>
+    <published>2021-01-31T07:59:10.000Z</published>
+    <updated>2021-02-06T03:21:16.095Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu16.04 触摸板无响应</title>
+    <link href="http://yoursite.com/2020/11/28/Ubuntu%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/11/28/Ubuntu%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/</id>
+    <published>2020-11-28T14:58:35.000Z</published>
+    <updated>2021-02-06T03:21:16.095Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法"><a href="#神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法" class="headerlink" title="神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法"></a>神州笔记本电脑安装ubuntu16.04系统 触摸板不响应解决办法</h1><p>sudo gedit /etc/default/grub<br>把GRUB_CMDLINE_LINUX=” “ 改为GRUB_CMDLINE_LINUX=”i8042.reset i8042.nomux i8042.nopnp i8042.noloop”<br>sudo update-grub<br>sudo reboot</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法&quot;&gt;&lt;a href=&quot;#神州笔记本电脑安装ubuntu16-04系统-触摸板不响应解决办法&quot; class=&quot;headerlink&quot; title=&quot;神州笔记本电脑安装ubuntu16.04系统 触摸板
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RESLAM</title>
+    <link href="http://yoursite.com/2020/05/17/RESLAM/"/>
+    <id>http://yoursite.com/2020/05/17/RESLAM/</id>
+    <published>2020-05-17T01:07:41.000Z</published>
+    <updated>2021-02-06T03:21:16.095Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="RESLAM-简介"><a href="#RESLAM-简介" class="headerlink" title="RESLAM 简介"></a>RESLAM 简介</h1><p>RESLAM全称: A real-time robust edge-based SLAM system，输入是RGBD传感器数据，采用边缘像素特征进行tracking的方式。</p><h1 id="前端处理"><a href="#前端处理" class="headerlink" title="前端处理"></a>前端处理</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;RESLAM-简介&quot;&gt;&lt;a href=&quot;#RESLAM-简介&quot; class=&quot;headerlink&quot; title=&quot;RESLAM 简介&quot;&gt;&lt;/a&gt;RESLAM 简介&lt;/h1&gt;&lt;p&gt;RESLAM全称: A real-time robust edge-based SL
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Thread 进程</title>
+    <link href="http://yoursite.com/2020/05/07/Thread/"/>
+    <id>http://yoursite.com/2020/05/07/Thread/</id>
+    <published>2020-05-07T13:47:05.000Z</published>
+    <updated>2021-02-06T03:21:16.095Z</updated>
+    
+    <content type="html"><![CDATA[<p>#　进程资源函数 (resource limit)</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CPU                   0                    <span class="comment">/* CPU time in ms */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_FSIZE                 1                    <span class="comment">/* Maximum filesize */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_DATA                  2                    <span class="comment">/* max data size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_STACK                 3                    <span class="comment">/* max stack size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_CORE                  4                    <span class="comment">/* max core file size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_RSS                   5                    <span class="comment">/* max resident set size */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NOFILE                6                    <span class="comment">/* max number of open files */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_AS                    7                    <span class="comment">/* address space limit(?) */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_NPROC                 8                    <span class="comment">/* max number of processes */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MEMLOCK               9                    <span class="comment">/* max locked-in-memory address space */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_LOCKS                 10                   <span class="comment">/* maximum file locks held */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_SIGPENDING            11                   <span class="comment">/* max number of pending signals */</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIMIT_MSGQUEUE              12                   <span class="comment">/* maximum bytes in POSIX mqueues */</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RLIM_NLIMITS                 13</span></span><br></pre></td></tr></table></figure><p>rlim_cur字段是资源的当前资源限制，例如current-&gt;signal-&gt;rlim[RLIMIT_CPU],rmlim_cur表示正在运行进程所占用的CPU时间的当前限制。</p><h1 id="进程切换（process-switch）"><a href="#进程切换（process-switch）" class="headerlink" title="进程切换（process switch）"></a>进程切换（process switch）</h1><p>硬件上下文–&gt;进程恢复执行前必须装入寄存器的一组数据称为硬件上下文</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#　进程资源函数 (resource limit)&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 学习笔记</title>
+    <link href="http://yoursite.com/2020/05/02/artilce/"/>
+    <id>http://yoursite.com/2020/05/02/artilce/</id>
+    <published>2020-05-02T14:56:49.000Z</published>
+    <updated>2021-02-06T03:21:16.095Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="docker-三要素"><a href="#docker-三要素" class="headerlink" title="docker 三要素"></a>docker 三要素</h1><ul><li>镜像（image）———— 类比于类</li><li>容器（container）——— 类比于对象</li><li>仓库（repository）——- 存放着镜像</li></ul><h1 id="docker-相关命令使用"><a href="#docker-相关命令使用" class="headerlink" title="docker 相关命令使用"></a>docker 相关命令使用</h1><h2 id="安装docker–ubuntu系统"><a href="#安装docker–ubuntu系统" class="headerlink" title="安装docker–ubuntu系统"></a>安装docker–ubuntu系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure><h2 id="镜像加速器文件配置"><a href="#镜像加速器文件配置" class="headerlink" title="镜像加速器文件配置"></a>镜像加速器文件配置</h2><p>docker配置文件目录 /etc/docker/damemon.js</p><pre><code>{    "registry-mirrors": [        "https://hub-mirror.c.163.com",        "https://docker.mirrors.ustc.edu.cn",        "https://mirror.ccs.tencentyun.com",        "https://registry.docker-cn.com"    ]}</code></pre><h2 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h2><pre><code>sudo systemctl enable dockersudo systemctl start docker</code></pre><h2 id="添加当前用户组到docker用户组"><a href="#添加当前用户组到docker用户组" class="headerlink" title="添加当前用户组到docker用户组"></a>添加当前用户组到docker用户组</h2><pre><code>sudo groupadd dockersudo usermod -aG docker $USER</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;docker-三要素&quot;&gt;&lt;a href=&quot;#docker-三要素&quot; class=&quot;headerlink&quot; title=&quot;docker 三要素&quot;&gt;&lt;/a&gt;docker 三要素&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;镜像（image）———— 类比于类&lt;/li&gt;
+&lt;li&gt;容器（c
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
