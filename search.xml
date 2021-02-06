@@ -47,9 +47,4 @@ sudo usermod -aG docker $USER
 <h1 id="进程切换（process-switch）"><a href="#进程切换（process-switch）" class="headerlink" title="进程切换（process switch）"></a>进程切换（process switch）</h1><p>硬件上下文–&gt;进程恢复执行前必须装入寄存器的一组数据称为硬件上下文</p>
 ]]></content>
   </entry>
-  <entry>
-    <title>newpage</title>
-    <url>/2021/01/31/newpage/</url>
-    <content><![CDATA[]]></content>
-  </entry>
 </search>
